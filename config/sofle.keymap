@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define BASE 0
-#define LOWER 1
-#define RAISE 2
+#define LOWER 2
+#define RAISE 1
 #define ADJUST 3
 
 / {
@@ -20,7 +20,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <LOWER RAISE>;
+            if-layers = <RAISE LOWER>;
             then-layer = <ADJUST>;
         };
     };
